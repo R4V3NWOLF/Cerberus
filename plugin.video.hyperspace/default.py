@@ -24,10 +24,10 @@ FANART = ADDON_PATH + 'fanart.jpg'
 PATH = 'Hyperspace'
 VERSION = '0.0.1'
 Dialog = xbmcgui.Dialog()
-Base_Url = 'http://thereaper.x10host.com/CerberusRepo/Hyperspace/'
+Base_Url = 'http://thereaper.x10host.com/Cerberusrepo/Hyperspace/'
 
 def Main_Menu():
-    OPEN = Open_Url('http://thereaper.x10host.com/CerberusRepo/Hyperspace/mainmenu.php')
+    OPEN = Open_Url('http://thereaper.x10host.com/Cerberusrepo/Hyperspace/mainmenu.php')
     Regex = re.compile('<NAME>(.+?)</NAME><URL>(.+?)</URL><ICON>(.+?)</ICON><FANART>(.+?)</FANART><DESC>(.+?)</DESC>').findall(OPEN)
     for name,url,icon,fanart,desc in Regex:
         if '.php' in url:
